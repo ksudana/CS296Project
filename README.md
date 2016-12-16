@@ -29,7 +29,7 @@ d - Go down <br />
 look - Look around <br />
 search - Search room for object <br />
 take - Add object in room to inventory <br />
-inventory - List contents of inventory <br />
+items - List contents of inventory <br />
 fight - Fight goblin <br />
 health - Get health remaining <br />
 time - Get time remaining <br />

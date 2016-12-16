@@ -40,22 +40,22 @@
 
 (def obj-map
   {:key1 {:name "Key 1"
-          :desc "a key. It's labelled 'Key #1'"
+          :desc "a key. It's labelled 'Key #1'."
           :type :key}
    :key2 {:name "Key 2"
-          :desc "a key. It's labelled 'Key #2'"
+          :desc "a key. It's labelled 'Key #2'."
           :type :key}
    :key3 {:name "Key 3"
-          :desc "a key. It's labelled 'Key #3'"
+          :desc "a key. It's labelled 'Key #3'."
           :type :key}
    :key4 {:name "Key 4"
-          :desc "a key. It's labelled 'Key #4'"
+          :desc "a key. It's labelled 'Key #4'."
           :type :key}
    :key5 {:name "Key 5"
-          :desc "a key. It's labelled 'Key #5'"
+          :desc "a key. It's labelled 'Key #5'."
           :type :key}
    :key6 {:name "Key 6"
-          :desc "a key. It's labelled 'Key #6'"
+          :desc "a key. It's labelled 'Key #6'."
           :type :key}
    :sword {:name "Sword"
            :desc "a sword. This should help you fight the goblins!"}
@@ -71,11 +71,11 @@
    :note3 {:name "Note 3"
            :desc "a note. It reads 'You can only go through this portal if you can harvest three goblin souls with your orb. I'm counting on you! -Mattox'."
            :type :note}
-   :health-potion {:name "Heath Potion"
+   :health-potion {:name "Empty potion bottle"
                    :desc "a health potion. It restores 50 health points!"
                    :type :potion}
 
-   :health-potion2 {:name "Heath Potion 2"
+   :health-potion2 {:name "Empty potion bottle"
                    :desc "a health potion. It restores 50 health points!"
                    :type :potion}
   })
@@ -291,7 +291,7 @@
 
 (defn status [player]
   (let [location (player :location)]
-    (cond (= location :end) (do (println "Congrats! You've Found Mattox!") (System/exit 0))
+    (cond (= location :end) (do (println "Congrats! You've found Mattox!") (System/exit 0))
           (= location :death) (do (println "Wrong way! You've fallen to your death!") (System/exit 0))
           (= (player :health) 0) (do (println "You're out of health. You have perished!") (System/exit 0))
           (= (- 72 (player :moves)) 0) (do (println "You've ran out of time, Mattox is gone!") (System/exit 0))
@@ -359,10 +359,13 @@
         :else
         (do (println "No objects to take.") player))))
 
-(defn displayinventory [player]
+(defn displayitems [player]
    (let [items (player :inventory)]
      (if (empty? items) (do (println "You don't have anything.") player)
-         (do (println (str items)) player))))
+         (do (println "\nItems: ")
+         (loop [it items]
+           (if (empty? it) (do (print "\n") player)
+               (do (let [item (first it)] (println (-> obj-map item :name))) (recur (rest it)))))))))
 
 (defn getNum [numStr]
   (cond (= numStr "0") 0
@@ -423,12 +426,12 @@
          [:d] (go :down player)
          [:search] (search player)
          [:take] (take player)
-         [:inventory] (displayinventory player)
+         [:items] (displayitems player)
          [:fight] (if (goblin? player) (fight player) (do (println "No one to fight.") player))
          [:yell] (yell player)
          [:time] (do (println (str "Time Left: " (- 72 (player :moves)) " hours.")) player)
          [:health] (do (println (str "Health: " (player :health))) player)
-         [:help] (do (println  "\nCommands:\nn - Go north\ns - Go south\ne - Go east\nw - Go west\nu - Go up\nd - Go down\nlook - Look around\nsearch - Search room for objects\ntake - Add object in room to inventory\ninventory - List contents of inventory\nfight - Fight goblin\nhealth - Get amount of health\ntime - Get time remaining\nyell - Shout Dr. Mattox's name\nquit - Quit the game\n") player)
+         [:help] (do (println  "\nCommands:\nn - Go north\ns - Go south\ne - Go east\nw - Go west\nu - Go up\nd - Go down\nlook - Look around\nsearch - Search room for objects\ntake - Add object in room to inventory\nitems - List contents of inventory\nfight - Fight goblin\nhealth - Get amount of health\ntime - Get time remaining\nyell - Shout Dr. Mattox's name\nquit - Quit the game\n") player)
          [:quit] (System/exit 0)
          _ (do (println "I don't understand you.")
                player)
@@ -437,7 +440,7 @@
 (defn -main
   "Main method."
   [& args]
-  (println "Dr. Mattox has been kidnapped by a goblins! He's been hidden somewhere in the house, and it's your job to find him. (Type 'help' for a list of commands.)\n")
+  (println "\nRESCUING DR. MATTOX \n\nDr. Mattox has been kidnapped by a goblins! He's been hidden somewhere in the house, and it's your job to find him. (Type 'help' for a list of commands.)\n")
   (loop [local-map house-map
          local-obj-map obj-map
          local-enemy-map goblin-map
