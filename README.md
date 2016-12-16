@@ -1,4 +1,5 @@
 # RESCUING DR. MATTOX
+
   Karthik Sudana
   CS 296-25 Honors Project
 
@@ -14,24 +15,26 @@ Some things to note:
 
 -You have 100 health points, don't lose them or you will die!
 
+(Hint: If you're stuck, view the walkthrough file)
+
 ## Commands
 
-help - display commmands\n
-n - Go north\n
-s - Go south\n
-e - Go east\n
-w - Go west\n
-u - Go up\n
-d - Go down\n
-look - Look around\n
-search - Search room for object\n
-take - Add object in room to inventory\n
-inventory - List contents of inventory\n
-fight - Fight goblin\n
-health - Get amount of health\n
-time - Get time passed\n
-yell - Shout Dr. Mattox's name\n
-quit - Quit the game\n
+help - display commmands
+n - Go north
+s - Go south
+e - Go east
+w - Go west
+u - Go up
+d - Go down
+look - Look around
+search - Search room for object
+take - Add object in room to inventory
+inventory - List contents of inventory
+fight - Fight goblin
+health - Get amount of health
+time - Get time passed
+yell - Shout Dr. Mattox's name
+quit - Quit the game
 
 ## Usage
 

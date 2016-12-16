@@ -434,7 +434,7 @@
          ))
 
 (defn -main
-  "Main method"
+  "Dr. Mattox has been kidnapped by a goblins! He's been hidden somewhere in the house, and it's your job to find him. (Type 'help' for a list of commands.)"
   [& args]
   (println "Game start")
   (loop [local-map house-map
