@@ -62,10 +62,10 @@
          :desc "a mysterious orb. I wonder what it does?"
          :type :orb}
    :note1 {:name "Note 1"
-           :desc "a note. It reads 'Be wary as you go up, you're not the only one on the second floor. -Mattox'."
+           :desc "a note. It's from Mattox! It reads 'Be wary as you go up, there's danger on the second floor. -Mattox'."
            :type :note}
    :note2 {:name "Note 2"
-           :desc "a note. It reads 'You've made it this far, but the house only gets more treacherous on the next floor. Be careful! -Mattox'."
+           :desc "another note. It reads 'You've made it this far, but the house only gets more treacherous on the next floor. Be careful! -Mattox'."
            :type :note}
    :note3 {:name "Note 3"
            :desc "a note. It reads 'You can only go through this portal if you can harvest three goblin souls with your orb. I'm counting on you! -Mattox'."
@@ -434,9 +434,9 @@
          ))
 
 (defn -main
-  "Dr. Mattox has been kidnapped by a goblins! He's been hidden somewhere in the house, and it's your job to find him. (Type 'help' for a list of commands.)"
+  "Main method."
   [& args]
-  (println "Game start")
+  (println "Dr. Mattox has been kidnapped by a goblins! He's been hidden somewhere in the house, and it's your job to find him. (Type 'help' for a list of commands.)\n")
   (loop [local-map house-map
          local-obj-map obj-map
          local-enemy-map goblin-map

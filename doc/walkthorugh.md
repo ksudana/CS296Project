@@ -11,8 +11,9 @@ e <br />
 e <br />
 take <br />
 u <br />
-e <br />
 w <br />
+take <br />
+e <br />
 s <br />
 take <br />
 n <br />
