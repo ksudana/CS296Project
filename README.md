@@ -1,6 +1,6 @@
 # RESCUING DR. MATTOX
 
-  Karthik Sudana
+  Karthik Sudana <br />
   CS 296-25 Honors Project
 
 ## Instructions
@@ -19,22 +19,22 @@ Some things to note:
 
 ## Commands
 
-help - display commmands
-n - Go north
-s - Go south
-e - Go east
-w - Go west
-u - Go up
-d - Go down
-look - Look around
-search - Search room for object
-take - Add object in room to inventory
-inventory - List contents of inventory
-fight - Fight goblin
-health - Get amount of health
-time - Get time passed
-yell - Shout Dr. Mattox's name
-quit - Quit the game
+help - display commmands <br />
+n - Go north <br />
+s - Go south <br />
+e - Go east <br />
+w - Go west <br />
+u - Go up <br />
+d - Go down <br />
+look - Look around <br />
+search - Search room for object <br />
+take - Add object in room to inventory <br />
+inventory - List contents of inventory <br />
+fight - Fight goblin <br />
+health - Get amount of health <br />
+time - Get time passed <br />
+yell - Shout Dr. Mattox's name <br />
+quit - Quit the game <br />
 
 ## Usage
 
