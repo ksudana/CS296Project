@@ -9,7 +9,7 @@ Dr. Mattox has been kidnapped by a goblins! He's been hidden somewhere in the ho
 
 Some things to note:
 
--This house is not like most others. Each time you move to a different room, one hour passes. Remember, you must find Mattox within 72 hours or he will be gone for good!
+-This house is not like most others. Each time you move to a different room, one hour passes. Remember, you must find Mattox within 72 hours!
 
 -Beware of goblins. They want the superior intellect of Mattox for themselves, and will not let you have him without a fight.
 
@@ -19,7 +19,7 @@ Some things to note:
 
 ## Commands
 
-help - display commmands <br />
+help - Display commmands <br />
 n - Go north <br />
 s - Go south <br />
 e - Go east <br />
@@ -31,8 +31,8 @@ search - Search room for object <br />
 take - Add object in room to inventory <br />
 inventory - List contents of inventory <br />
 fight - Fight goblin <br />
-health - Get amount of health <br />
-time - Get time passed <br />
+health - Get health remaining <br />
+time - Get time remaining <br />
 yell - Shout Dr. Mattox's name <br />
 quit - Quit the game <br />
 
