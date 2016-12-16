@@ -1,6 +1,7 @@
 (ns adventure.core
   (:require [clojure.core.match :refer [match]]
             [clojure.string :as str])
+  (:refer-clojure :exclude [take])
   (:gen-class))
 
 (def goblin-map
