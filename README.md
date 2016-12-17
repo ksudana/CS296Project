@@ -38,4 +38,4 @@ quit - Quit the game <br />
 
 ## Usage
 
-To start the game, use `lein run` from the command line.
+To start the game, use `lein run` from the command line, or run the standalone jar file in the target directory.
