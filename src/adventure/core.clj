@@ -193,7 +193,7 @@
             :goblin :goblin2
             :floor 3}
 
-   :room16 {:desc "There is one door to the south"
+   :room16 {:desc "There is one door to the south. "
             :goblin-desc "In front of you there's... ANOTHER LARGE GOBLIN! "
             :title "in room 16"
             :dir {:south :room15}
