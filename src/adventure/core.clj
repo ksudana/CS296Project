@@ -54,9 +54,6 @@
    :key5 {:name "Key 5"
           :desc "a key. It's labelled 'Key #5'."
           :type :key}
-   :key6 {:name "Key 6"
-          :desc "a key. It's labelled 'Key #6'."
-          :type :key}
    :sword {:name "Sword"
            :desc "a sword. This should help you fight the goblins!"}
    :orb {:name "Mysterious Orb"
@@ -121,8 +118,8 @@
            :title "in room 6"
            :dir {:south :room5}
            :floor 2
-           :contents :key6
-           :lock :key5}
+           :contents :key5
+           :lock :key4}
 
    :room7 {:desc "The only door is behind you (east). "
            :title "in room 7"
@@ -175,13 +172,13 @@
             :dir {:east :room12}
             :floor 3
             :contents :orb
-            :lock :key6}
+            :lock :key5}
 
    :room14 {:desc "There is a door behind you (south). "
             :title "in room 14"
             :dir {:south :room12}
             :floor 3
-            :contents :key5}
+            :contents :key4}
 
    :room15 {:desc "There are rooms to the north, east, and west. "
             :goblin-desc "You look in front of you and see... A GOBLIN! This one's bigger than the last one. "
